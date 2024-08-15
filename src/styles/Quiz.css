@@ -1,0 +1,18 @@
+.Quiz {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Quiz h1 {
+    color: white;
+}
+
+#nextQuestion {
+    width: 200px;
+}

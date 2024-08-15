@@ -1,0 +1,15 @@
+.EndScreen {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EndScreen h1, h3 {
+    color: white;
+}
+
