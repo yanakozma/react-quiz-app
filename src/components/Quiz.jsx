@@ -1,6 +1,6 @@
-import "../styles/Quiz.css"
-import { Questions } from "../helpers/Questions"
-import { useState } from "react"
+import "../styles/Quiz.css";
+import { Questions } from "../helpers/Questions";
+import { useState } from "react";
 import { useContext } from "react";
 import { GameStateContext } from "../helpers/Contexts";
 
@@ -8,7 +8,8 @@ export default function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [optionChosen, setOptionChosen] = useState("");
     const [buttonNum, setButtonNum] = useState("");
-    const [isNotSelected, setIsNotSelected] = useState(false)
+    const [isNotSelected, setIsNotSelected] = useState(false);
+
     const { setScore, setGameState } = useContext(GameStateContext);
 
     const chooseOption = (evt, option) => {
@@ -24,7 +25,6 @@ export default function Quiz() {
                 setCurrentQuestion((currValue) => currValue + 1);
                 setOptionChosen("");
                 setIsNotSelected(false);
-
             } else {
                 setCurrentQuestion((currValue) => currValue + 1);
                 setOptionChosen("");
@@ -32,7 +32,6 @@ export default function Quiz() {
             }
         } else {
             setIsNotSelected(true);
-
         }
     };
     const finishQuiz = () => {
@@ -52,7 +51,7 @@ export default function Quiz() {
         <div className="Quiz">
             <h1>{Questions[currentQuestion].prompt}</h1>
             {isNotSelected && <h3>Select one of the following options to continue</h3>}
-            <div className="questions">
+            <div className="Quiz-questions">
                 <button
                     style={{
                         backgroundColor: buttonNum === "first" ? "black" : "",
